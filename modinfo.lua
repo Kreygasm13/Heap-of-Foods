@@ -1,5 +1,5 @@
-name = "Heap of Foods"
-version = "1.5-A - 1.0 Fork Release"
+name = "Heap of Foods - Forked"
+version = "1.5-A - 1.1 Fork Release"
 local myupdate = "Ingredients Rework!"
 
 description = "󰀄 Adds 88 brand new Crock Pot dishes alongside new ingredients to use!\n\n󰀦 Guide on the mod page!\n\n󰀌 Mod Version: "..version.."\n\󰀧 Update: "..myupdate..""
@@ -54,4 +54,20 @@ configuration_options =
         },
         default = 0,
     },
+	{
+        name = "monsterfoodbuff",
+        label = "Monster Food Tweak",
+        hover = "Enable or Disable Monster Food Tweak.",
+        options =
+        {
+            {description = "Enabled", 
+			hover = "Monster Lasagna and Monster Tartare will restore 75 hunger points.",
+			data = 0},
+            {description = "Disabled", 
+			hover = "Monster Lasagna and Monster Tartare will restore their original hunger points.",
+			data = 1},
+        },
+        default = 0,
+    },
+	
 }
