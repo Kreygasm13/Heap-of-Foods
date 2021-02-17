@@ -225,6 +225,14 @@ end
 for k, v in pairs(require("kyno_foodspicer")) do
 	AddCookerRecipe("portablespicer", v)
 end
+
+for k, v in pairs(require("butter")) do
+	if not v.tags then
+		AddCookerRecipe("cookpot", v)
+		AddCookerRecipe("archive_cookpot", v)
+	end
+	AddCookerRecipe("portablecookpot", v)
+end
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Fix For Spiced Foods and Potlevel.
 local spices = { "chili", "garlic", "sugar", "salt" }
@@ -336,6 +344,8 @@ local kynofoods =
 	gorge_trifle = require("kyno_foodrecipes").gorge_trifle,
 	gorge_cheesecake = require("kyno_foodrecipes").gorge_cheesecake,
 	kyno_syrup = require("kyno_foodrecipes").kyno_syrup,
+	
+	butter = require("butter").butter
 }
 
 kynofoods.coffee.potlevel = "med"
