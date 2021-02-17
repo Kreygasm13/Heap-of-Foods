@@ -1,5 +1,5 @@
 name = "Heap of Foods"
-version = "1.5-A"
+version = "1.5-A-FORK - Beta 2"
 local myupdate = "Ingredients Rework!"
 
 description = "󰀄 Adds 88 brand new Crock Pot dishes alongside new ingredients to use!\n\n󰀦 Guide on the mod page!\n\n󰀌 Mod Version: "..version.."\n\󰀧 Update: "..myupdate..""
