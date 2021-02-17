@@ -72,8 +72,24 @@ PrefabFiles =
 	"ash",
 	"evergreens",
 }
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
--- New Crock Pot Ingredients.
+
+-----------------------------------Monster Food Rebalance-----------------------------------
+
+local dishes = require("preparedfoods")
+
+if GetModConfigData("monsterfoodbuff") == 0 then dishes.monsterlasagna.hunger = TUNING.CALORIES_HUGE
+
+end
+
+local disheswarly = require("preparedfoods_warly")
+
+if GetModConfigData("monsterfoodbuff") == 0 then disheswarly.monstertartare.hunger = TUNING.CALORIES_HUGE
+
+end
+
+
+-----------------------------------New Crock Pot Ingredients-----------------------------------
+
 AddIngredientValues({"trunk_summer"}, {meat=1}, {trunk=1}, true)
 AddIngredientValues({"trunk_winter"}, {meat=1}, {trunk=1}, true)
 AddIngredientValues({"trunk_cooked"}, {meat=1}, {trunk=1}, true)
