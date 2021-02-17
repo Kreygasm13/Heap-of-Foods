@@ -1296,17 +1296,7 @@ local kyno_foods =
 		floater = {"med", nil, 0.65},
 	},
 	
-}
-
-for k, recipe in pairs(kyno_foods) do
-	recipe.name = k
-	recipe.weight = 1
-	recipe.cookbook_atlas = "images/cookbookimages/kyno_cookbook.xml"
-	recipe.cookbook_tex = k..".tex"
-end
-
-local butter
-butter =
+	butter =
 	{
 	test = function(cooker, names, tags) return names.butterflywings and ( names.butterflywings == 4 ) end,
 	priority = 1,
@@ -1318,11 +1308,14 @@ butter =
 	cooktime = 1,
 	floater = {"med", nil, 0.65},
 	},
+	
+}
 
-for k, recipe in pairs(butter) do
+for k, recipe in pairs(kyno_foods) do
 	recipe.name = k
 	recipe.weight = 1
+	recipe.cookbook_atlas = "images/cookbookimages/kyno_cookbook.xml"
+	recipe.cookbook_tex = k..".tex"
 end
 
 return kyno_foods
-return butter
