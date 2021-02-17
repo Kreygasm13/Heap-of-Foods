@@ -1298,9 +1298,9 @@ local kyno_foods =
 	
 	butter =
 	{
-	test = function(cooker, names, tags) return names.butterflywings and ( names.butterflywings == 4 ) and not tags.inedibles end,
+	test = function(cooker, names, tags) return names.butterflywings and ( names.butterflywings == 4 ) end,
 	priority = 1,
-	--foodtype = FOODTYPE.GOODIES,
+	foodtype = FOODTYPE.GOODIES,
 	perishtime = TUNING.PERISH_SUPERSLOW,
 	health = 40,
 	hunger = 25,
