@@ -59,7 +59,6 @@ local kyno_foods =
 		sanity = 15,
 		cooktime = 2,
 		floater = {"med", nil, 0.65},
-		tags = {"masterfood"},
 	},
 	
 	sharkfinsoup = 
@@ -88,7 +87,6 @@ local kyno_foods =
 		sanity = 15,
 		cooktime = 2,
 		floater = {"med", nil, 0.65},
-		tags = {"masterfood"},
 	},
 	
 	caviar = 
@@ -285,7 +283,6 @@ local kyno_foods =
 		sanity = 33,
 		cooktime = 0.5,
 		floater = {"med", nil, 0.65},
-		tags = {"masterfood"},
 		prefabs = { "buff_sleepresistance" },
         oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_SLEEP_RESISTANCE,
         oneatenfn = function(inst, eater)
@@ -314,7 +311,6 @@ local kyno_foods =
 		sanity = 5,
 		cooktime = 1,
 		floater = {"med", nil, 0.65},
-		tags = {"masterfood"},
 	},
 	
 	slaw = 
@@ -371,7 +367,6 @@ local kyno_foods =
 		stacksize = 3,
 		oneat_desc = "Restores sanity over time",
 		floater = {"med", nil, 0.65},
-		tags = {"masterfood"},
         prefabs = { "kyno_sanityregenbuff" },
         oneatenfn = function(inst, eater)
             if eater.components.debuffable ~= nil and eater.components.debuffable:IsEnabled() and
@@ -395,7 +390,6 @@ local kyno_foods =
 		stacksize = 3,
 		oneat_desc = "Restores hunger over time",
 		floater = {"med", nil, 0.65},
-		tags = {"masterfood"},
         prefabs = { "kyno_hungerregenbuff" },
         oneatenfn = function(inst, eater)
             if eater.components.debuffable ~= nil and eater.components.debuffable:IsEnabled() and
@@ -419,7 +413,6 @@ local kyno_foods =
 		stacksize = 3,
 		oneat_desc = "Restores all over time",
 		floater = {"med", nil, 0.65},
-		tags = {"masterfood"},
         prefabs = { "kyno_superregenbuff" },
         oneatenfn = function(inst, eater)
             if eater.components.debuffable ~= nil and eater.components.debuffable:IsEnabled() and
@@ -1066,7 +1059,6 @@ local kyno_foods =
 		sanity = 30,
 		cooktime = 1.2,
 		floater = {"med", nil, 0.65},
-		tags = {"masterfood"},
 	},
 	
 	gorge_fettuccine = 
@@ -1129,7 +1121,6 @@ local kyno_foods =
 		sanity = 20,
 		cooktime = 2.5,
 		floater = {"med", nil, 0.65},
-		tags = {"masterfood"},
 	},
 	
 	gorge_pot_roast =
@@ -1223,7 +1214,6 @@ local kyno_foods =
 		sanity = 15,
 		cooktime = 1,
 		floater = {"med", nil, 0.65},
-		tags = {"masterfood"},
 	},
 	
 	gorge_crab_ravioli =
@@ -1276,7 +1266,6 @@ local kyno_foods =
 		sanity = 60,
 		cooktime = 1,
 		floater = {"med", nil, 0.65},
-		tags = {"masterfood"},
 	},
 	
 	gorge_cheesecake =
@@ -1306,6 +1295,20 @@ local kyno_foods =
 		cooktime = 1,
 		floater = {"med", nil, 0.65},
 	},
+	
+	butter =
+	{
+	test = function(cooker, names, tags) return names.butterflywings and ( names.butterflywings == 4 ) and not tags.inedibles end,
+	priority = 1,
+	--foodtype = FOODTYPE.GOODIES,
+	perishtime = TUNING.PERISH_SUPERSLOW,
+	health = 40,
+	hunger = 25,
+	sanity = 0,
+	cooktime = 1,
+	floater = {"med", nil, 0.65},
+	},
+	
 }
 
 for k, recipe in pairs(kyno_foods) do
