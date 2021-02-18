@@ -1296,19 +1296,6 @@ local kyno_foods =
 		floater = {"med", nil, 0.65},
 	},
 	
-	butter =
-	{
-	test = function(cooker, names, tags) return names.butterflywings and ( names.butterflywings == 4 ) end,
-	priority = 1,
-	foodtype = FOODTYPE.GOODIES,
-	perishtime = TUNING.PERISH_SUPERSLOW,
-	health = 40,
-	hunger = 25,
-	sanity = 0,
-	cooktime = 1,
-	floater = {"med", nil, 0.65},
-	},
-	
 }
 
 for k, recipe in pairs(kyno_foods) do
