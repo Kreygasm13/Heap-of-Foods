@@ -5,7 +5,7 @@ Originally made by Kyno, Forked over Github by KreygasmTR
 
 Original Mod: https://steamcommunity.com/sharedfiles/filedetails/?id=2334209327
 
-Github Page: https://github.com/Kreygasm13/Heap-of-Foods
+Github Page of the Original: https://github.com/ImKyno/Heap-of-Foods
 
 Adds 88 brand new Crock Pot dishes alongside new ingredients to use!
 
