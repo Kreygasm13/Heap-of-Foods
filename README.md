@@ -1,4 +1,4 @@
-# Heap-of-Foods
+# Heap-of-Foods-FORKED
 Food Mod for DST. Made by Kyno. Forked by KreygasmTR
 
 Originally made by Kyno, Forked over Github by KreygasmTR
