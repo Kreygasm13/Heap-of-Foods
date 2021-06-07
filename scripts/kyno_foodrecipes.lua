@@ -59,7 +59,7 @@ local kyno_foods =
 		sanity = 15,
 		cooktime = 2,
 		floater = {"med", nil, 0.65},
-		tags = {"masterfood"},
+
 	},
 	
 	sharkfinsoup = 
@@ -79,7 +79,7 @@ local kyno_foods =
 	
 	sweetpotatosouffle =
 	{
-		test = function(cooker, names, tags) return (names.kyno_sweetpotato == 2) and (tags.egg == 2) and not (names.kyno_sweetpotato_cooked) and not (names.potato or names.potato_cooked) end,
+		test = function(cooker, names, tags) return (names.kyno_sweetpotato == 2) and tags.egg and tags.egg >= 2 and not (names.kyno_sweetpotato_cooked) and not (names.potato or names.potato_cooked) end,
 		priority = 30,
 		foodtype = FOODTYPE.VEGGIE,
 		secondaryfoodtype = FOODTYPE.MEAT,
@@ -89,7 +89,7 @@ local kyno_foods =
 		sanity = 15,
 		cooktime = 2,
 		floater = {"med", nil, 0.65},
-		tags = {"masterfood"},
+
 	},
 	
 	caviar = 
@@ -278,7 +278,7 @@ local kyno_foods =
 		sanity = 33,
 		cooktime = 0.5,
 		floater = {"med", nil, 0.65},
-		tags = {"masterfood"},
+
 		prefabs = { "buff_sleepresistance" },
         oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_SLEEP_RESISTANCE,
         oneatenfn = function(inst, eater)
@@ -307,7 +307,7 @@ local kyno_foods =
 		sanity = 5,
 		cooktime = 1,
 		floater = {"med", nil, 0.65},
-		tags = {"masterfood"},
+
 	},
 	
 	slaw = 
@@ -363,7 +363,7 @@ local kyno_foods =
 		stacksize = 3,
 		oneat_desc = "Restores sanity over time",
 		floater = {"med", nil, 0.65},
-		tags = {"masterfood"},
+
         prefabs = { "kyno_sanityregenbuff" },
         oneatenfn = function(inst, eater)
             if eater.components.debuffable ~= nil and eater.components.debuffable:IsEnabled() and
@@ -387,7 +387,7 @@ local kyno_foods =
 		stacksize = 3,
 		oneat_desc = "Restores hunger over time",
 		floater = {"med", nil, 0.65},
-		tags = {"masterfood"},
+
         prefabs = { "kyno_hungerregenbuff" },
         oneatenfn = function(inst, eater)
             if eater.components.debuffable ~= nil and eater.components.debuffable:IsEnabled() and
@@ -411,7 +411,7 @@ local kyno_foods =
 		stacksize = 3,
 		oneat_desc = "Restores all over time",
 		floater = {"med", nil, 0.65},
-		tags = {"masterfood"},
+
         prefabs = { "kyno_superregenbuff" },
         oneatenfn = function(inst, eater)
             if eater.components.debuffable ~= nil and eater.components.debuffable:IsEnabled() and
@@ -1111,7 +1111,7 @@ local kyno_foods =
 		sanity = 30,
 		cooktime = 1.2,
 		floater = {"med", nil, 0.65},
-		tags = {"masterfood"},
+
 	},
 	
 	gorge_fettuccine = 
@@ -1174,7 +1174,7 @@ local kyno_foods =
 		sanity = 20,
 		cooktime = 2.5,
 		floater = {"med", nil, 0.65},
-		tags = {"masterfood"},
+
 	},
 	
 	gorge_pot_roast =
@@ -1269,7 +1269,7 @@ local kyno_foods =
 		sanity = 15,
 		cooktime = 1,
 		floater = {"med", nil, 0.65},
-		tags = {"masterfood"},
+
 	},
 	
 	gorge_crab_ravioli =
@@ -1322,7 +1322,7 @@ local kyno_foods =
 		sanity = 60,
 		cooktime = 1,
 		floater = {"med", nil, 0.65},
-		tags = {"masterfood"},
+
 	},
 	
 	gorge_cheesecake =
