@@ -1,9 +1,9 @@
-name = "Heap of Foods"
-version = "1.8-A"
+name = "Heap of Foods: Forked"
+version = "2.1-A - Fork Update 1.4"
 local myupdate = "Vegetables Overload!"
 
-description = "󰀄 Adds 90 brand new Crock Pot dishes alongside new ingredients to use!\n\n󰀦 Guide on the mod page!\n\n󰀌 Mod Version: "..version.."\n\󰀧 Update: "..myupdate..""
-author = "Kyno"
+description = "󰀄 Adds 92 brand new Crock Pot dishes alongside new ingredients to use!\n\n󰀦 Guide on the mod page!\n\n󰀌 Mod Version: "..version.."\n\󰀧 Update: "..myupdate..""
+author = "Original: Kyno, Fork: KreygasmTR"
 
 api_version = 10
 
@@ -69,4 +69,18 @@ configuration_options =
         },
         default = 1,
 	},
+	{	
+		name = "butleramount",
+		label = "Butter Amount",
+		hover = "Sets the buttler amount got from grinding.",
+		options =	{
+						{description = "One", data = 1 },
+						{description = "Two", data = 2 },
+						{description = "Three", data = 3 },
+						{description = "Four", data = 4 },
+						{description = "Five", data = 5 },
+						{description = "Six", data = 6 },
+					},
+		default = 2,
+    },
 }
