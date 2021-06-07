@@ -262,6 +262,14 @@ MEALINGTAB, TECH.MEALING_ONE, nil, nil, true, 3, nil, "images/inventoryimages.xm
 local KynSpice = AddRecipe("kyno_spotspice", {Ingredient("kyno_spotspice_leaf", 2, "images/inventoryimages/kyno_foodimages.xml")},
 MEALINGTAB, TECH.MEALING_ONE, nil, nil, true, 3, nil, "images/inventoryimages.xml", "quagmire_spotspice_ground.tex")
 
+local butter = AddRecipe(
+	"butter",
+	{
+		Ingredient("butterflywings", 12),
+	},
+	MEALINGTAB,
+	TECH.MEALING_ONE, nil, nil, true, GetModConfigData("butleramount"), nil)
+
 local KynSalt = AddRecipe("kyno_salt", {Ingredient("saltrock", 2)},
 MEALINGTAB, TECH.MEALING_ONE, nil, nil, true, 3, nil, "images/inventoryimages.xml", "quagmire_salt.tex")
 
